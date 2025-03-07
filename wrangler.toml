@@ -4,8 +4,5 @@ compatibility_date = "2025-03-07"
 # Pages configuration for Cloudflare Pages
 pages_build_output_dir = ".next"
 
-[build]
-command = "npm run build"
-
 [env.production.vars]
 NEXT_RUNTIME = "edge"
