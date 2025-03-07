@@ -34,12 +34,19 @@ const nextConfig = {
             vendor: {
               test: /[\\/]node_modules[\\/]/,
               name(module) {
-                // Get the package name
-                const packageName = module.context.match(
+                // Check if module.context exists first
+                if (!module.context) return "vendor";
+
+                // Get the package name with a safety check for the match
+                const match = module.context.match(
                   /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-                )[1];
+                );
+
+                // If match is null or undefined, return a default name
+                if (!match || !match[1]) return "vendor";
+
                 // Return a name that won't exceed length limits
-                return `npm.${packageName.replace("@", "")}`;
+                return `npm.${match[1].replace("@", "")}`;
               },
               maxSize: 20000000, // 20MB max chunk size
             },
