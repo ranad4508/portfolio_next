@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Soft teal/mint theme for light mode - no white */
+    --background: 175 30% 94%;
+    --foreground: 200 50% 15%;
+
+    --card: 180 25% 96%;
+    --card-foreground: 200 50% 15%;
+
+    --popover: 180 25% 96%;
+    --popover-foreground: 200 50% 15%;
+
+    --primary: 196 85% 38%;
+    --primary-foreground: 196 85% 98%;
+
+    --secondary: 160 50% 92%;
+    --secondary-foreground: 170 70% 25%;
+
+    --muted: 180 20% 88%;
+    --muted-foreground: 200 30% 40%;
+
+    --accent: 168 70% 45%;
+    --accent-foreground: 168 70% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 180 30% 85%;
+    --input: 180 30% 85%;
+    --ring: 196 85% 38%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Deep indigo/violet theme for dark mode */
+    --background: 240 30% 18%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 30% 22%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 30% 22%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 260 80% 60%;
+    --primary-foreground: 260 80% 98%;
+
+    --secondary: 240 30% 26%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 30% 26%;
+    --muted-foreground: 210 40% 70%;
+
+    --accent: 290 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 30% 30%;
+    --input: 240 30% 30%;
+    --ring: 260 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+    background-image: radial-gradient(
+        at 100% 0%,
+        hsla(196, 85%, 75%, 0.4) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 0% 100%, hsla(168, 70%, 75%, 0.4) 0px, transparent 50%);
+  }
+
+  .dark body {
+    background-image: radial-gradient(
+        at 100% 0%,
+        hsla(260, 80%, 30%, 0.4) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 0% 100%, hsla(290, 70%, 30%, 0.4) 0px, transparent 50%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  section {
+    scroll-margin-top: 4rem;
+  }
+
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary/10;
+  }
+
+  /* Custom link styles */
+  .link-hover {
+    @apply text-primary hover:text-accent transition-colors duration-300;
+  }
+}
+
+/* Theme transition */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Animation for theme toggle */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-toggle-rotate {
+  animation: rotate 0.5s ease;
+}
