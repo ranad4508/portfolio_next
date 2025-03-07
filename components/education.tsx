@@ -54,7 +54,7 @@ export default function Education() {
       period: "2015 - 2017",
       achievements: [
         "Winner of intra school quiz competition",
-        "First position drawing competition",
+        "First position in drawing competition",
         "Second position in poem competition",
         "Good rank holder in NCC program",
       ],
