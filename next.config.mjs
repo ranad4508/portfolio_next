@@ -14,7 +14,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: true,
-  output: "export",
+  output: "standalone",
   webpack: (config, { dev, isServer }) => {
     // Disable persistent caching
     config.cache = false;
