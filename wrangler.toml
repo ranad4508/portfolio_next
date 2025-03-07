@@ -1,22 +1,22 @@
 name = "portfolio"
 compatibility_date = "2025-03-07"
-compatibility_flags = ["nodejs_compat"]
 
-pages_build_output_dir = ".next/static"
+# Pages configuration
+main = "workers-site/index.js"  # Add this line for Pages
+pages = { 
+  # The directory where the output of your build command is located
+  dir = ".next/static", 
+  # The entry point file for your Pages
+  entry_point = "workers-site/index.js" 
+}
 
-# For Next.js projects
+# Remove unsupported fields for Pages projects
 [build]
-command = "npm run build"
+command = "npm run build"  # This remains, since it runs your build process
 
-[site]
-bucket = ".next/static"
-
-[build.upload]
-format = "service-worker"
-
-# Next.js specific settings
+# Remove the workers_dev, zone_id, site, and build.upload fields for Pages
 [env.production]
-workers_dev = true
+workers_dev = false
 route = ""
 zone_id = ""
 
