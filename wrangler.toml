@@ -3,12 +3,13 @@ compatibility_date = "2025-03-07"
 
 # Pages configuration
 main = "workers-site/index.js"  # Add this line for Pages
-pages = { 
-  # The directory where the output of your build command is located
-  dir = ".next/static", 
-  # The entry point file for your Pages
-  entry_point = "workers-site/index.js" 
-}
+pages = [
+  { 
+    dir = ".next/static", 
+    entry_point = "workers-site/index.js"
+  }
+]
+
 
 # Remove unsupported fields for Pages projects
 [build]
