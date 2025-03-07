@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -13,7 +13,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="text-xl font-bold text-primary">
-              Dinesh Kumar Rana
+              <Image
+                src="/logo.png"
+                height={0}
+                width={0}
+                alt="Logo"
+                className="h-auto w-28"
+              />
             </Link>
             <p className="mt-2 text-muted-foreground">
               Frontend Developer | MERN Stack | Flutter
