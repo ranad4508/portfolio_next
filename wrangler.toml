@@ -1,0 +1,13 @@
+name = "portfolio-next"
+type = "javascript"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+# Use Cloudflare Pages with Node.js compatibility
+compatibility_flags = ["nodejs_compat"]
+
+[[env]]
+name = "NODE_ENV"
+value = "production"
