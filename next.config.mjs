@@ -13,6 +13,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  reactStrictMode: true,
   output: "export",
   webpack: (config, { dev, isServer }) => {
     // Disable persistent caching

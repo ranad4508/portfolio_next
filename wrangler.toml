@@ -1,9 +1,0 @@
-name = "portfolio"
-compatibility_flags = [ "nodejs_compat" ]
-compatibility_date = "2024-09-23"
-
-# Pages configuration for Cloudflare Pages
-pages_build_output_dir = ".next"
-
-[env.production.vars]
-NEXT_RUNTIME = "edge"
