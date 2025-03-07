@@ -1,15 +1,11 @@
-name = "your-project-name"
+name = "portfolio"
 type = "javascript"
 
 [build]
-  command = "npm run build"  # Your build command
-  cwd = "src"  # The directory where your Next.js app resides
+  command = "npm run build"
+  cwd = "."
 
 [build.upload]
-  format = "service-worker"  # For Next.js with Workers environment
-  pages_build_output_dir = ".next"  # The directory where your built assets will be located
-  # This specifies where Cloudflare should look for the output after the build process is finished
+  format = "service-worker"
+  pages_build_output_dir = ".next" 
 
-[[env]]
-name = "NODE_ENV"
-value = "production"
