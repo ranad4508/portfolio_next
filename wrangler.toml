@@ -1,0 +1,22 @@
+name = "portfolio"
+compatibility_date = "2025-03-07"
+compatibility_flags = ["nodejs_compat"]
+
+# For Next.js projects
+[build]
+command = "npm run build"
+
+[site]
+bucket = ".next/static"
+
+[build.upload]
+format = "service-worker"
+
+# Next.js specific settings
+[env.production]
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production.vars]
+NEXT_RUNTIME = "edge"
