@@ -1,26 +1,11 @@
 name = "portfolio"
 compatibility_date = "2025-03-07"
 
-# Pages configuration
-main = "workers-site/index.js"  # Add this line for Pages
-pages = [
-  { 
-    dir = ".next/static", 
-    entry_point = "workers-site/index.js"
-  }
-]
+# Pages configuration for Cloudflare Pages
+pages_build_output_dir = ".next"
 
-
-
-# Remove unsupported fields for Pages projects
 [build]
-command = "npm run build"  # This remains, since it runs your build process
-
-# Remove the workers_dev, zone_id, site, and build.upload fields for Pages
-[env.production]
-workers_dev = false
-route = ""
-zone_id = ""
+command = "npm run build"
 
 [env.production.vars]
 NEXT_RUNTIME = "edge"

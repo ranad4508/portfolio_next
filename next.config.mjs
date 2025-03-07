@@ -13,6 +13,21 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  output: "export",
+  webpack: (config, { dev, isServer }) => {
+    // Reduce the size of the webpack output
+    config.optimization.minimize = true;
+
+    // Only include production minimizer
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: "all",
+        maxSize: 20000000, // 20MB max chunk size
+      };
+    }
+
+    return config;
+  },
   images: {
     unoptimized: true,
   },
