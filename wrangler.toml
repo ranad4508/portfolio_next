@@ -11,6 +11,7 @@ pages = [
 ]
 
 
+
 # Remove unsupported fields for Pages projects
 [build]
 command = "npm run build"  # This remains, since it runs your build process
