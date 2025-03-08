@@ -141,6 +141,70 @@ const projects: Project[] = [
     liveDemo: "https://growandgrace.netlify.app/",
     sourceCode: "https://github.com/ranad4508/grow_and_grace",
   },
+  {
+    id: 10,
+    title: "E-Mall",
+    description:
+      "A mobile e-commerce application built with Flutter and Firebase.",
+    image: "/emall.jpg",
+    category: "mobile",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Firestore Database",
+      "Firebase",
+      "Android Studio",
+    ],
+    fullDescription:
+      "E-Mall is a modern e-commerce mobile application that allows users to browse products, add items to their cart, and make secure transactions. It features real-time database updates using Firestore and seamless authentication with Firebase.",
+    liveDemo: "https://github.com/ranad4508/ecommerce_flutter",
+    sourceCode: "https://github.com/ranad4508/ecommerce_flutter",
+  },
+  {
+    id: 11,
+    title: "Job Sathi",
+    description: "A job portal mobile app developed using Java and PHP.",
+    image: "/job-sathi.jpg",
+    category: "mobile",
+    tech: ["Java", "Gradle", "XML", "PHP", "MySQL"],
+    fullDescription:
+      "Job Sathi is a job portal mobile application designed for job seekers and employers. It provides features like job listings, applications, and resume uploads. The backend is powered by PHP and MySQL, while the frontend is developed using Java and XML in Android Studio.",
+    liveDemo: "https://github.com/ranad4508/job_portal_android",
+    sourceCode: "https://github.com/ranad4508/job_portal_android",
+  },
+  {
+    id: 12,
+    title: "Tab Manager Plus",
+    description:
+      "A Chrome extension for tab management, clipboard, and auto-fill.",
+    image: "/tab-manager.png",
+    category: "web",
+    tech: ["Bootstrap", "HTML5", "CSS3", "JavaScript"],
+    fullDescription:
+      "Smart Tab Manager is a powerful Chrome extension designed to enhance productivity. It helps users efficiently manage browser tabs, save clipboard history, and auto-fill repetitive forms. The extension offers a clean UI, quick access to saved data, and customizable settings for a seamless browsing experience.",
+    liveDemo: "https://github.com/ranad4508/chrome_extension_tab_manager",
+    sourceCode: "https://github.com/ranad4508/chrome_extension_tab_manager",
+  },
+  {
+    id: 13,
+    title: "E-Mall Rider",
+    description: "A rider app for E-Mall, built with Flutter and Firebase.",
+    image: "/emall-rider.jpg",
+    category: "mobile",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Firestore Database",
+      "Firebase",
+      "Android Studio",
+    ],
+    fullDescription:
+      "E-Mall Rider is a delivery application designed for riders assigned by the E-Mall admin. It allows riders to manage their assigned orders, update delivery status, and track earnings. The app is built using Flutter for a seamless cross-platform experience, with Firebase handling authentication and Firestore for real-time order updates.",
+    liveDemo:
+      "https://github.com/ranad4508/ecommerce_flutter/tree/main/rider%20app",
+    sourceCode:
+      "https://github.com/ranad4508/ecommerce_flutter/tree/main/rider%20app",
+  },
 ];
 
 export default function Projects() {

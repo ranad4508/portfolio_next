@@ -12,8 +12,8 @@ export default function Hero() {
   const phrases = [
     "Frontend Developer",
     "MERN Stack Developer",
-    "Mobile Developer",
-    "Mobile App Developer",
+    "Android Developer",
+    "Flutter Developer",
   ];
 
   const [displayText, setDisplayText] = useState("");
@@ -110,6 +110,11 @@ export default function Hero() {
             >
               <Link href="/projects">View Projects</Link>
             </Button>
+            <Button>
+              <Link href="https://drive.google.com/file/d/1MWAZKco0A-VIzIpiZINw165E820zHc-K/view?usp=sharing">
+                View Resume
+              </Link>
+            </Button>
           </div>
           <div className="flex gap-4 pt-4">
             <Button
@@ -163,7 +168,7 @@ export default function Hero() {
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl shadow-primary/10">
             <Image
-              src="/_DSC0642.jpg"
+              src="/_DSC0642.png"
               alt="Dinesh Kumar Rana"
               fill
               className="object-cover w-full h-full"
