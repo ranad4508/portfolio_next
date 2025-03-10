@@ -69,7 +69,6 @@ export default function Contact() {
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
-        duration: 5000,
       });
 
       setFormData({
@@ -139,9 +138,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground">
-                    Mahalaxmi - 05, Lalitpur, Nepal
-                  </p>
+                  <p className="text-muted-foreground">Kathmandu, Nepal</p>
                 </div>
               </div>
             </div>

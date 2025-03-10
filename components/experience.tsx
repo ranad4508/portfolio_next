@@ -7,9 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Building2 } from "lucide-react";
 
 export default function Experience() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
   });
 
   const experiences = [
@@ -33,43 +33,84 @@ export default function Experience() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+    hover: {
+      y: -5,
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
     <section id="experience" className="py-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <SectionHeading>Experience</SectionHeading>
-        <div ref={ref} className="space-y-6">
+
+        <motion.div
+          ref={ref}
+          className="mt-10 space-y-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+        >
           {experiences.map((exp, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={exp.id}
+              variants={cardVariants}
+              whileHover="hover"
+              className="relative"
             >
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
-                    <span>{exp.title}</span>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="mr-1 h-4 w-4" />
+              <Card className="border-primary/10 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <CardHeader className="pb-3">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <CardTitle className="text-xl font-bold">
+                      {exp.title}
+                    </CardTitle>
+                    <div className="flex items-center text-sm text-muted-foreground bg-muted/30 px-3 py-1 rounded-full">
+                      <Calendar className="mr-2 h-4 w-4" />
                       <span>{exp.period}</span>
                     </div>
-                  </CardTitle>
-                  <div className="flex items-center text-primary">
-                    <img
-                      src={exp.logo}
-                      alt="Company Logo"
-                      className="w-12 h-12 rounded-full mr-2"
-                    />
-                    <span>{exp.company}</span>
+                  </div>
+
+                  <div className="flex items-center text-primary mt-2">
+                    <div className="w-12 h-12 rounded-full overflow-hidden mr-3 border border-primary/20">
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} Logo`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span className="font-medium flex items-center">
+                      <Building2 className="mr-1 h-4 w-4" />
+                      {exp.company}
+                    </span>
                   </div>
                 </CardHeader>
+
                 <CardContent>
-                  <p>{exp.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {exp.description}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

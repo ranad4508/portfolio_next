@@ -141,3 +141,18 @@
 .theme-toggle-rotate {
   animation: rotate 0.5s ease;
 }
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Certificate ribbon effect */
+.certificate-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25rem 1rem;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 50%);
+}

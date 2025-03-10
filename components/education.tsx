@@ -27,7 +27,7 @@ export default function Education() {
     {
       institution: "Orchid International College",
       location: "Gaushala, Kathmandu",
-      degree: "Bachelor's in Computer Science",
+      degree: "Bachelor's in Computer Application",
       period: "2021 - 2025",
       current: true,
       achievements: [
