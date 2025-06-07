@@ -226,6 +226,100 @@ const projectsWithYears: Project[] = [
 
   // 2025 Projects
   {
+    id: 19,
+    title: "Ngyungne.org",
+    description: "A Buddhist event management and donation platform.",
+    image: "/ngyungne.png",
+    category: "web",
+    tech: ["Next.js", "TypeScript", "Node.js", "Express", "MongoDB"],
+    fullDescription:
+      "Ngyungne.org is a spiritual platform built for managing Buddhist fasting events (Ngyungne) and facilitating online donations. It allows users to register for events, make contributions, and receive updates. The admin panel supports event scheduling and user management. Built using the MERN stack, the site is optimized for accessibility, responsiveness, and performance.",
+    liveDemo: "https://ngyungne.org",
+    sourceCode: "https://github.com/ranad4508/ngyungne",
+    year: 2025,
+  },
+
+  {
+    id: 21,
+    title: "Expense Tracker",
+    description: "A mobile app to track daily expenses and manage budgets.",
+    image: "/expensetracker-native.png",
+    category: "mobile",
+    tech: ["React Native", "Expo", "JavaScript", "AsyncStorage"],
+    fullDescription:
+      "The Expense Tracker app helps users manage their daily income and expenses with ease. It features categorized transactions, budget setting, history filtering, and monthly summaries. Built with React Native and Expo for cross-platform compatibility, and uses AsyncStorage for offline data persistence.",
+    liveDemo: "https://github.com/ranad4508/expense-tracker",
+    sourceCode: "https://github.com/ranad4508/expense-tracker",
+    year: 2025,
+  },
+
+  {
+    id: 22,
+    title: "Sijan Shrestha Portfolio",
+    description: "A developer portfolio showcasing Sijan Shrestha’s projects.",
+    image: "/sijan.png",
+    category: "web",
+    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    fullDescription:
+      "This portfolio website showcases the work, skills, and experience of developer Sijan Shrestha. Built using Next.js and styled with Tailwind CSS, the site includes animated sections, a blog, contact form, and project showcases. It’s optimized for performance and SEO with responsive design for all devices.",
+    liveDemo: "https://sijanshrestha.vercel.app",
+    sourceCode: "https://github.com/ranad4508/sijan-portfolio",
+    year: 2025,
+  },
+  {
+    id: 23,
+    title: "Tek Bahadur Tamang Portfolio",
+    description: "Personal portfolio website for Tek Bahadur Tamang.",
+    image: "/tek.png",
+    category: "web",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    fullDescription:
+      "A professional portfolio site for Tek Bahadur Tamang to showcase his skills, experience, and projects. Built using Next.js and styled with Tailwind CSS, the site features a clean UI, fast loading speed, and responsive layout. It includes project galleries, contact info, and a downloadable resume.",
+    liveDemo: "https://tekbahadur.vercel.app",
+    sourceCode: "https://github.com/ranad4508/tek-portfolio",
+    year: 2025,
+  },
+  {
+    id: 24,
+    title: "Sonam Gyurme Tamang Portfolio",
+    description: "A modern developer portfolio for Sonam Gyurme Tamang.",
+    image: "/sonam.png",
+    category: "web",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    fullDescription:
+      "This is a personal portfolio website built for Sonam Gyurme Tamang to highlight his technical skills, resume, and projects. Built with Next.js, it leverages server-side rendering for speed and SEO, along with clean UI elements for an engaging presentation.",
+    liveDemo: "https://sonamgyurme.vercel.app",
+    sourceCode: "https://github.com/ranad4508/sonam-portfolio",
+    year: 2025,
+  },
+  {
+    id: 25,
+    title: "Resume Builder AI",
+    description: "AI-powered resume creation platform with live preview.",
+    image: "/resumebuilder.png",
+    category: "web",
+    tech: ["Next.js", "React", "Tailwind CSS", "OpenAI API"],
+    fullDescription:
+      "Resume Builder AI allows users to generate professional resumes using AI assistance. Users can input experience, education, and skills, and the AI generates content suggestions. The app offers multiple templates, PDF export, and customization options. Built with Next.js for high performance and API routes integration.",
+    liveDemo: "https://resumebuilderai.vercel.app",
+    sourceCode: "https://github.com/ranad4508/resume-builder-ai",
+    year: 2025,
+  },
+  {
+    id: 26,
+    title: "Nepali Land Converter",
+    description: "Convert Nepali land units between Ropani, Aana, Paisa, Daam.",
+    image: "/nepalilandconverter.png",
+    category: "web",
+    tech: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+    fullDescription:
+      "Nepali Land Converter is a utility web app that helps convert traditional Nepali land units such as Ropani, Aana, Paisa, and Daam to square feet or square meters. It provides real-time conversion, responsive design, and is ideal for students, surveyors, and property buyers.",
+    liveDemo: "https://nepaliland.vercel.app",
+    sourceCode: "https://github.com/ranad4508/land-converter",
+    year: 2025,
+  },
+
+  {
     id: 17,
     title: "BTMC Foundation",
     description: "Non-profit organization website with donation system.",
